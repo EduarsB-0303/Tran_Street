@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_inicio"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/menu_inicio" />
+        <item
+            android:id="@+id/nav_sitiosInteres"
+            android:icon="@drawable/ic_map_black"
+            android:title="@string/menu_sitiosInteres" />
+        <item
+            android:id="@+id/nav_misViajes"
+            android:icon="@drawable/ic_card_travel_black"
+            android:title="@string/menu_misViajes" />
+        <item
+            android:id="@+id/nav_recorridos"
+            android:icon="@drawable/ic_directions_car_black"
+            android:title="@string/menu_recorridos" />
+    </group>
+
+    <item android:title="Mas">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/menu_acercaDe" />
+        </menu>
+    </item>
+
+</menu>

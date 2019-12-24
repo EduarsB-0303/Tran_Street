@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_inicio">
+
+    <fragment
+        android:id="@+id/nav_inicio"
+        android:name="com.example.apptransporte.ui.inicio.InicioFragment"
+        android:label="@string/menu_inicio"
+        tools:layout="@layout/fragment_inicio" />
+
+    <fragment
+        android:id="@+id/nav_sitiosInteres"
+        android:name="com.example.apptransporte.ui.sitioInteres.SitioInteres"
+        android:label="@string/menu_sitiosInteres"
+        tools:layout="@layout/fragment_sitio_interes" />
+
+    <fragment
+    android:id="@+id/nav_misViajes"
+    android:name="com.example.apptransporte.ui.viaje.MisViajes"
+    android:label="@string/menu_misViajes"
+    tools:layout="@layout/fragment_mis_viajes"  />
+
+
+    <fragment
+        android:id="@+id/nav_recorridos"
+        android:name="com.example.apptransporte.ui.recorrido.Recorridos"
+        android:label="@string/menu_recorridos"
+        tools:layout="@layout/fragment_recorridos"  />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.apptransporte.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+
+</navigation>
