@@ -17,6 +17,7 @@ import android.view.ViewGroup;
 import com.example.apptransporte.Adapter.AdapterSitios;
 import com.example.apptransporte.Dto.Sectores;
 import com.example.apptransporte.R;
+import com.example.apptransporte.dal.SectorDAL;
 import com.example.apptransporte.segunda;
 import com.example.apptransporte.ui.viaje.MisViajes;
 
@@ -26,42 +27,25 @@ import java.util.ArrayList;
 public class SitioInteres extends Fragment {
     AdapterSitios adapterSitios;
     public RecyclerView recyclerView;
+    private SectorDAL sectorDAL;
+    private ArrayList<Sectores> listaSectores;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        
+        new AdapterSitios(getActivity().getApplicationContext());
         View root = inflater.inflate(R.layout.fragment_sitio_interes, container, false);
         recyclerView=(RecyclerView)root.findViewById(R.id.listaSitiosInteres);
-        adapterSitios = new AdapterSitios(listSectoresCompleta());
+
+        this.sectorDAL = new SectorDAL(getActivity().getApplicationContext(), new Sectores());
+        this.listaSectores = new SectorDAL(getActivity().getBaseContext()).seleccionar();
+
+        adapterSitios = new AdapterSitios(this.listaSectores);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(),2));
-        listSectoresCompleta();
         recyclerView.setAdapter(adapterSitios);
+
 
         return root;
     }
-    public ArrayList<Sectores> listSectoresCompleta(){
-        ArrayList<Sectores> listSectores = new ArrayList<>();
-        listSectores.add(new Sectores("Linea 999"));
-        listSectores.add(new Sectores("Mall Calama"));
-        listSectores.add(new Sectores("Cruz Verde"));
-        listSectores.add(new Sectores("Carabineros 101"));
-        listSectores.add(new Sectores("Ahumada"));
-        listSectores.add(new Sectores("Centro"));
-        listSectores.add(new Sectores("Linea 999"));
-        listSectores.add(new Sectores("Mall Calama"));
-        listSectores.add(new Sectores("Cruz Verde"));
-        listSectores.add(new Sectores("Carabineros 101"));
-        listSectores.add(new Sectores("Ahumada"));
-        listSectores.add(new Sectores("Centro"));
-        listSectores.add(new Sectores("Linea 999"));
-        listSectores.add(new Sectores("Mall Calama"));
-        listSectores.add(new Sectores("Cruz Verde"));
-        listSectores.add(new Sectores("Carabineros 101"));
-        listSectores.add(new Sectores("Ahumada"));
-        listSectores.add(new Sectores("Centro"));
-
-
-        return listSectores;
-    }
-
 }

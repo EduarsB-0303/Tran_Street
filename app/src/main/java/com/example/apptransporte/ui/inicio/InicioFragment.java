@@ -14,6 +14,8 @@ import com.example.apptransporte.Adapter.AdapterTransporte;
 import com.example.apptransporte.Dto.Autobus;
 import com.example.apptransporte.Dto.Colectivo;
 import com.example.apptransporte.R;
+import com.example.apptransporte.dal.AutobusDAL;
+import com.example.apptransporte.dal.ColectivoDAL;
 
 import java.util.ArrayList;
 
@@ -22,13 +24,23 @@ public class InicioFragment extends Fragment {
     AdapterTransporte adapter;
     public RecyclerView recyclerView;
     private LinearLayoutManager layoutManager;
+    private AutobusDAL microdal;
+    private ArrayList<Autobus> listaAutobus;
+    private ColectivoDAL coldal;
+    private ArrayList<Colectivo> listaColectivo;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_inicio, container, false);
 
         recyclerView=(RecyclerView)root.findViewById(R.id.idListaTransporte);
 
-        adapter = new AdapterTransporte(ListaAutobusCompleta(),ListaColectivoCompleta());
+        this.microdal = new AutobusDAL(getActivity().getApplicationContext(), new Autobus());
+        this.listaAutobus = new AutobusDAL(getActivity().getBaseContext()).seleccionar();
+
+        this.coldal = new ColectivoDAL(getActivity().getApplicationContext(), new Colectivo());
+        this.listaColectivo = new ColectivoDAL(getActivity().getBaseContext()).seleccionar();
+
+        adapter = new AdapterTransporte(this.listaAutobus,this.listaColectivo);
         layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(layoutManager);
 
@@ -36,36 +48,4 @@ public class InicioFragment extends Fragment {
 
         return root;
     }
-    public ArrayList<Autobus>ListaAutobusCompleta(){
-        ArrayList<Autobus> listMicro = new ArrayList<>();
-        listMicro.add(new Autobus("Autobus 999","#ff0000",500,150));
-        listMicro.add(new Autobus("Autobus 888","#ffff00",500,150));
-        listMicro.add(new Autobus("Autobus 777","#008000",500,150));
-        listMicro.add(new Autobus("Autobus 666","#ffff00",500,150));
-        listMicro.add(new Autobus("Autobus 555","#ff0000",500,150));
-        listMicro.add(new Autobus("Autobus 444","#ff0000",500,150));
-        listMicro.add(new Autobus("Autobus 333","#008000",500,150));
-        listMicro.add(new Autobus("Autobus 222","#ffff00",500,150));
-        listMicro.add(new Autobus("Autobus 111","#0000FF",500,150));
-
-        return listMicro;
-    }
-
-
-
-    public ArrayList<Colectivo>ListaColectivoCompleta(){
-        ArrayList<Colectivo> listMicro = new ArrayList<>();
-        listMicro.add(new Colectivo("Colectivo 9","#ff0000",500,150));
-        listMicro.add(new Colectivo("Colectivo 8","#ffff00",500,150));
-        listMicro.add(new Colectivo("Colectivo 7","#008000",500,150));
-        listMicro.add(new Colectivo("Colectivo 6","#ffff00",500,150));
-        listMicro.add(new Colectivo("Colectivo 5","#ff0000",500,150));
-        listMicro.add(new Colectivo("Colectivo 4","#ff0000",500,150));
-        listMicro.add(new Colectivo("Colectivo 3","#008000",500,150));
-        listMicro.add(new Colectivo("Colectivo 2","#ffff00",500,150));
-        listMicro.add(new Colectivo("Colectivo 1","#0000FF",500,150));
-
-        return listMicro;
-    }
-
 }

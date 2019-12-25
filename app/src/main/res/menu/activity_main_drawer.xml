@@ -17,9 +17,14 @@
             android:icon="@drawable/ic_card_travel_black"
             android:title="@string/menu_misViajes" />
         <item
-            android:id="@+id/nav_recorridos"
-            android:icon="@drawable/ic_directions_car_black"
-            android:title="@string/menu_recorridos" />
+        android:id="@+id/nav_recorridos"
+        android:icon="@drawable/ic_directions_car_black"
+        android:title="@string/menu_recorridos" />
+        <item
+            android:id="@+id/nav_favorito"
+            android:icon="@drawable/baseline_favorite_border_24"
+            android:title="@string/menu_Favorito"
+            />
     </group>
 
     <item android:title="Mas">

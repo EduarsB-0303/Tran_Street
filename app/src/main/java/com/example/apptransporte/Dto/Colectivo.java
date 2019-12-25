@@ -1,7 +1,7 @@
 package com.example.apptransporte.Dto;
 
 public class Colectivo {
-
+    private int idColectivo;
     private String nombre_linea,color_linea;
     private int tarifa_n_linea;
     private int tarifa_e_linea;
@@ -12,6 +12,14 @@ public class Colectivo {
     }
 
     public Colectivo(String nombre_linea, String color_linea, int tarifa_n_linea, int tarifa_e_linea) {
+        this.nombre_linea = nombre_linea;
+        this.color_linea = color_linea;
+        this.tarifa_n_linea = tarifa_n_linea;
+        this.tarifa_e_linea = tarifa_e_linea;
+    }
+
+    public Colectivo(int idColectivo, String nombre_linea, String color_linea, int tarifa_n_linea, int tarifa_e_linea) {
+        this.idColectivo = idColectivo;
         this.nombre_linea = nombre_linea;
         this.color_linea = color_linea;
         this.tarifa_n_linea = tarifa_n_linea;
@@ -48,5 +56,13 @@ public class Colectivo {
 
     public void setColor_linea(String color_linea) {
         this.color_linea = color_linea;
+    }
+
+    public int getIdColectivo() {
+        return idColectivo;
+    }
+
+    public void setIdColectivo(int idColectivo) {
+        this.idColectivo = idColectivo;
     }
 }

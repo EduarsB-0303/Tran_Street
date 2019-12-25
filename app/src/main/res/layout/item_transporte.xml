@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         >
+
         <TextView
             android:id="@+id/idNombre"
             android:layout_width="wrap_content"
@@ -18,7 +19,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:text="Linea 107"
-            android:textColor="#000000"
+            android:textColor="#FFFFFF"
             android:textSize="34sp"
             android:textStyle="bold" />
         <TextView
@@ -37,7 +38,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="15dp"
             android:text="Tarifa Estudiantil: $500"
-            android:textColor="#000000"
+            android:textColor="#FFFFFF"
             android:textSize="14sp"
             android:textStyle="bold" />
 
@@ -48,7 +49,7 @@
             android:layout_marginLeft="200dp"
             android:layout_marginTop="-20dp"
             android:text="Tarifa Estudiantil: $150"
-            android:textColor="#000000"
+            android:textColor="#FFFFFF"
             android:textSize="14sp"
             android:textStyle="bold" />
 
