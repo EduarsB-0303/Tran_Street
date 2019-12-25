@@ -19,12 +19,13 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="match_parent"
-            android:layout_height="140dp"
+            android:layout_width="150dp"
+            android:layout_height="120dp"
             app:srcCompat="@android:drawable/sym_def_app_icon" />
+
         <TextView
             android:id="@+id/idNombreSitio"
-            android:layout_width="match_parent"
+            android:layout_width="115dp"
             android:layout_height="match_parent"
             android:text="Linea 107"
             android:gravity="center"
@@ -32,6 +33,20 @@
             android:textSize="16sp"
             android:textStyle="bold"
             />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="115dp"
+            android:layout_marginTop="-40dp">
+            <ImageView
+                android:id="@+id/fav_no"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                app:srcCompat="@drawable/ic_favorite_border_black" />
+        </LinearLayout>
+
 
 
     </LinearLayout>

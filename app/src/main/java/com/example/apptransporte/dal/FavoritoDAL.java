@@ -1,5 +1,6 @@
 package com.example.apptransporte.dal;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -25,8 +26,46 @@ public class FavoritoDAL {
         this.fav = new Favorito();
     }
 
+
+
     //Métodos CRUD
     //Ver
+
+    public void addFavorito(Favorito favorito){
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        ContentValues c = new ContentValues();
+        c.put("id_fav",favorito.getIdFav());
+        c.put("nombre_fav",favorito.getNombre());
+        try{
+            db.insert("favorito",null,c);
+        }catch (Exception e){
+
+        }
+
+    }
+    public void eliminarFavorito(int id){
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        int filasAfectadas;
+        try {
+            filasAfectadas = db.delete("favorito","id_fav = ?",new String[]{ String.valueOf(id)});
+        }catch (Exception e){
+
+        }
+    }
+
+    public boolean esFavorito(int id){
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        Cursor consulta = db.rawQuery("SELECT * FROM favorito WHERE id_fav = ?", new String[]{String.valueOf(id)});
+        if(consulta.moveToFirst()) {
+            do {
+                return true;
+            } while(consulta.moveToNext());
+        }
+        return false;
+    }
+
+
+
     public ArrayList<Favorito> seleccionar() {
         ArrayList<Favorito> lista = new ArrayList<>();
         SQLiteDatabase db = dbHelper.getReadableDatabase();
@@ -35,10 +74,10 @@ public class FavoritoDAL {
 
         if(consulta.moveToFirst()) {
             do {
-                int id = consulta.getInt(0);
+                int idfav = consulta.getInt(0);
                 String nombre = consulta.getString(1);
 
-                Favorito f = new Favorito(id,nombre);
+                Favorito f = new Favorito(idfav,nombre);
                 lista.add(f);
 
             } while(consulta.moveToNext());

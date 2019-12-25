@@ -15,8 +15,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.apptransporte.Adapter.AdapterSitios;
+import com.example.apptransporte.Dto.Favorito;
 import com.example.apptransporte.Dto.Sectores;
 import com.example.apptransporte.R;
+import com.example.apptransporte.dal.FavoritoDAL;
 import com.example.apptransporte.dal.SectorDAL;
 import com.example.apptransporte.segunda;
 import com.example.apptransporte.ui.viaje.MisViajes;
@@ -39,9 +41,13 @@ public class SitioInteres extends Fragment {
         recyclerView=(RecyclerView)root.findViewById(R.id.listaSitiosInteres);
 
         this.sectorDAL = new SectorDAL(getActivity().getApplicationContext(), new Sectores());
+
+
+
         this.listaSectores = new SectorDAL(getActivity().getBaseContext()).seleccionar();
 
-        adapterSitios = new AdapterSitios(this.listaSectores);
+
+        adapterSitios = new AdapterSitios(this.listaSectores, getActivity());
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(),2));
         recyclerView.setAdapter(adapterSitios);
 

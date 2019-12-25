@@ -4,6 +4,7 @@ public class Favorito {
     private int idFav;
     private String nombre;
 
+
     public Favorito() {
     }
 
@@ -11,6 +12,8 @@ public class Favorito {
         this.idFav = idFav;
         this.nombre = nombre;
     }
+
+
 
     public int getIdFav() {
         return idFav;
@@ -27,4 +30,5 @@ public class Favorito {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
 }
