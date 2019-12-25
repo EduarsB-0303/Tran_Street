@@ -29,8 +29,6 @@ public class FavoritoDAL {
 
 
     //Métodos CRUD
-    //Ver
-
     public void addFavorito(Favorito favorito){
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         ContentValues c = new ContentValues();
