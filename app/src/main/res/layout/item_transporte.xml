@@ -13,7 +13,7 @@
         >
 
         <TextView
-            android:id="@+id/idNombre"
+            android:id="@+id/txtLinea"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -23,7 +23,7 @@
             android:textSize="34sp"
             android:textStyle="bold" />
         <TextView
-            android:id="@+id/colorLinea"
+            android:id="@+id/txtColor"
             android:layout_width="150dp"
             android:layout_height="5dp"
             android:layout_marginLeft="260dp"
@@ -32,7 +32,7 @@
             />
 
         <TextView
-            android:id="@+id/idTarifaN"
+            android:id="@+id/txtTarifaN"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -43,7 +43,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/idTarifaE"
+            android:id="@+id/txtTarifaE"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="200dp"

@@ -1,7 +1,5 @@
 package com.example.apptransporte.ui.recorrido;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -16,8 +14,8 @@ import com.example.apptransporte.Adapter.AdapterTransporte;
 import com.example.apptransporte.Dto.Autobus;
 import com.example.apptransporte.Dto.Colectivo;
 import com.example.apptransporte.R;
-import com.example.apptransporte.dal.AutobusDAL;
-import com.example.apptransporte.dal.ColectivoDAL;
+import com.example.apptransporte.Dal.AutobusDAL;
+import com.example.apptransporte.Dal.ColectivoDAL;
 
 import java.util.ArrayList;
 
@@ -45,7 +43,7 @@ public class Recorridos extends Fragment {
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_recorridos, container, false);
 
-        recyclerView=(RecyclerView)root.findViewById(R.id.rcRecorrido);
+        recyclerView=(RecyclerView)root.findViewById(R.id.listRecorrido);
 
         this.microdal = new AutobusDAL(getActivity().getApplicationContext(), new Autobus());
         this.listaAutobus = new AutobusDAL(getActivity().getBaseContext()).seleccionar();

@@ -11,12 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.apptransporte.Adapter.AdapterFavorito;
-import com.example.apptransporte.Adapter.AdapterSitios;
 import com.example.apptransporte.Dto.Favorito;
-import com.example.apptransporte.Dto.Sectores;
 import com.example.apptransporte.R;
-import com.example.apptransporte.dal.FavoritoDAL;
-import com.example.apptransporte.dal.SectorDAL;
+import com.example.apptransporte.Dal.FavoritoDAL;
 
 import java.util.ArrayList;
 

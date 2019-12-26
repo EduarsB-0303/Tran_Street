@@ -14,8 +14,8 @@ import com.example.apptransporte.Adapter.AdapterTransporte;
 import com.example.apptransporte.Dto.Autobus;
 import com.example.apptransporte.Dto.Colectivo;
 import com.example.apptransporte.R;
-import com.example.apptransporte.dal.AutobusDAL;
-import com.example.apptransporte.dal.ColectivoDAL;
+import com.example.apptransporte.Dal.AutobusDAL;
+import com.example.apptransporte.Dal.ColectivoDAL;
 
 import java.util.ArrayList;
 

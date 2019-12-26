@@ -1,32 +1,21 @@
 package com.example.apptransporte.Adapter;
 
-import android.content.ClipData;
 import android.content.Context;
-import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.apptransporte.Dto.Favorito;
-import com.example.apptransporte.Helpers.DatabaseHelper;
 import com.example.apptransporte.R;
 import com.example.apptransporte.Dto.Sectores;
-import com.example.apptransporte.dal.FavoritoDAL;
-import com.example.apptransporte.ui.favorito.Favoritos;
-import com.example.apptransporte.ui.inicio.InicioFragment;
-import com.example.apptransporte.ui.viaje.MisViajes;
-import com.example.apptransporte.*;
+import com.example.apptransporte.Dal.FavoritoDAL;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;

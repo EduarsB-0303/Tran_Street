@@ -1,4 +1,4 @@
-package com.example.apptransporte.dal;
+package com.example.apptransporte.Dal;
 
 import android.content.Context;
 import android.database.Cursor;

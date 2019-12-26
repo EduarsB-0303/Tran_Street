@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lyViaje"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:textColor="#FFFFFF"
+            android:id="@+id/txtViajeLSitio"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="11dp"
+            android:text="TextView"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:textColor="#FFFFFF"
+            android:id="@+id/txtViajeLinea"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="11dp"
+            android:text="TextView"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtViajeColor"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginLeft="260dp"
+            android:layout_marginTop="-20dp"
+
+            />
+
+        <TextView
+            android:textColor="#FFFFFF"
+            android:id="@+id/txtViajeTarifa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="11dp"
+            android:text="@string/txtViajesValor" />
+
+        <TextView
+            android:id="@+id/txtViajeValor"
+            android:layout_width="141dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="260dp"
+            android:layout_marginTop="-20dp"
+            android:layout_marginRight="11dp"
+            android:text="TextView"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+</LinearLayout>

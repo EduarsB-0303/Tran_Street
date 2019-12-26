@@ -72,11 +72,11 @@ public class AdapterTransporte extends RecyclerView.Adapter<AdapterTransporte.Vi
         LinearLayout linearLayout;
         public Viewholder(@NonNull View itemView) {
             super(itemView);
-            this.colorL=itemView.findViewById(R.id.colorLinea);
+            this.colorL=itemView.findViewById(R.id.txtColor);
             this.linearLayout=itemView.findViewById(R.id.linear);
-            this.nombre = itemView.findViewById(R.id.idNombre);
-            this.tarifae = itemView.findViewById(R.id.idTarifaE);
-            this.tarifan = itemView.findViewById(R.id.idTarifaN);
+            this.nombre = itemView.findViewById(R.id.txtLinea);
+            this.tarifae = itemView.findViewById(R.id.txtTarifaE);
+            this.tarifan = itemView.findViewById(R.id.txtTarifaN);
         }
     }
 }

@@ -1,11 +1,7 @@
 package com.example.apptransporte.ui.sitioInteres;
 
-import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 
-import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,13 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.apptransporte.Adapter.AdapterSitios;
-import com.example.apptransporte.Dto.Favorito;
 import com.example.apptransporte.Dto.Sectores;
 import com.example.apptransporte.R;
-import com.example.apptransporte.dal.FavoritoDAL;
-import com.example.apptransporte.dal.SectorDAL;
-import com.example.apptransporte.segunda;
-import com.example.apptransporte.ui.viaje.MisViajes;
+import com.example.apptransporte.Dal.SectorDAL;
 
 import java.util.ArrayList;
 
