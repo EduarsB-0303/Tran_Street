@@ -13,6 +13,7 @@
     <string name="menu_recorridos">Recorridos</string>
     <string name="menu_ayuda">Ayuda</string>
     <string name="menu_Favorito">Favorito</string>
+    <string name="menu_idioma">Idioma</string>
 
     <string name="nombre_aplicacion">TranStreet</string>
     <string name="txtTarifaN">Tarifa: </string>
