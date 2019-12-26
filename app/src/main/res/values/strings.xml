@@ -16,7 +16,8 @@
 
     <string name="nombre_aplicacion">TranStreet</string>
     <string name="txtTarifaN">Tarifa: </string>
-    <string name="txtTarifaE">Tarifa especial: </string>
+    <string name="txtNameTarifaNormal">Tarifa: </string>
+    <string name="txtNameTarifaEspecial">Tarifa especial: </string>
     <string name="txtViajesValor">Tarifa: </string>
 
     <!-- TODO: Remove or change this placeholder text -->
