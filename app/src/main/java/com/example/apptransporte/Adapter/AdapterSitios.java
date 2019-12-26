@@ -59,9 +59,7 @@ public class AdapterSitios extends RecyclerView.Adapter<AdapterSitios.ViewHolder
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
         holder.nombreSitio.setText(String.valueOf(listado.get(position).getNombre()));
-
         FavoritoDAL fadal = new FavoritoDAL(context);
-
         if (fadal.esFavorito(position)){
            holder.favNo.setImageResource(R.drawable.ic_favorite_black);
         }
@@ -110,24 +108,15 @@ public class AdapterSitios extends RecyclerView.Adapter<AdapterSitios.ViewHolder
     public class ViewHolder extends RecyclerView.ViewHolder{
         TextView nombreSitio;
         ImageView favNo;
+        ImageView imgSitio;
         CardView card;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            this.imgSitio = itemView.findViewById(R.id.imgSitio);
             this.favNo = itemView.findViewById(R.id.fav_no);
             this.card= itemView.findViewById(R.id.cardSitios);
             this.nombreSitio = itemView.findViewById(R.id.idNombreSitio);
-
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override public void onClick(View v) {
-                    int position = getAdapterPosition();
-
-                    Snackbar.make(v, "Click detected on item " + position,
-                            Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
-                }
-            });
         }
 
     }
-
 }

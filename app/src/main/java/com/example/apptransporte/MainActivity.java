@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
 
-        mAppBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_inicio,R.id.nav_misViajes,R.id.nav_sitiosInteres,R.id.nav_recorridos).setDrawerLayout(drawer).build();
+        mAppBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_inicio,R.id.nav_misViajes,R.id.nav_sitiosInteres,R.id.nav_recorridos,R.id.nav_favorito).setDrawerLayout(drawer).build();
 
         //SI COLOCO EL R.ID.NAV_XXXX, EL FRAGMENT SE LE COLOCA LA BARRA DEL MENU(ESA DE 3 LINEAS lll), Y SI (NO) LA COLOCO EN LOS PARAMETROS DE ARRIBA LE SALE EL BOTON DE VOLVER HACIA ATRAS.
 

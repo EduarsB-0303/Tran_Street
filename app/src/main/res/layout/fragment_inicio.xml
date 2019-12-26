@@ -19,7 +19,6 @@
         android:elevation="5dp"
         android:iconifiedByDefault="false"
         android:queryHint="Origen"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

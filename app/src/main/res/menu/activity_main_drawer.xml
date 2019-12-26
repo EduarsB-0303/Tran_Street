@@ -31,8 +31,8 @@
         <menu>
             <item
                 android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="@string/menu_acercaDe" />
+                android:icon="@drawable/baseline_help_outline_24"
+                android:title="@string/menu_ayuda" />
         </menu>
     </item>
 
